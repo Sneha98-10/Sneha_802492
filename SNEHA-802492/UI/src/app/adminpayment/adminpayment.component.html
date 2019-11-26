@@ -1,0 +1,42 @@
+<head>
+    <style>
+        th,td{
+            color:black;
+        }
+        
+        
+        </style>
+</head>
+<form style="width: max-content;height: max-content; background-color:white;margin-top:-8px;margin-left:350px;">
+<table class="table table-hover" style="width: max-content; height:max-content;margin-top:14px;margin-left: 11px; border:1;"  >
+        <thead>
+            <tr>
+                    <th>PAYMENTID</th>
+                    <th>USERID</th>
+                <th>USERFEE </th>
+                <th>MENTORID</th>
+                <th>MENTORFEE</th>
+               
+               
+                
+            </tr>
+        </thead>
+        <tbody *ngFor="let item of list">
+            <tr>
+                    <td>{{item.pid}}</td>
+                <td>{{item.uid}}</td>
+                <td>{{item.amount}}</td>
+                <td>{{item.mid}}</td>
+                <td>{{item.mentor_Amount}}</td>
+               
+                <!-- <td> <button type="submit">Block</button></td>
+                <td> <button type="submit" (click)="Delete(item.tid)">Delete</button></td> -->
+
+                <!-- <td>{{item.mnumber}}</td>
+                <td>{{item.mexperience}}</td>
+                <td>{{item.mtimeslot}}</td> -->
+              
+            </tr>
+        </tbody>
+    </table>
+</form>

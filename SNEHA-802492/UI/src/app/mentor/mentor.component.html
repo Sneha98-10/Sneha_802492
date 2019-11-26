@@ -1,0 +1,83 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+   
+   
+.dropbtn {
+  background-color: rgb(35, 148, 168);
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f5ececd0;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(238, 227, 227, 0.767);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 22px 62px;
+  text-decoration: none;
+  display: block;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+h1{
+  text-shadow: 3px 2px red;
+  color: white;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.dropdown-content a:hover {background-color: rgb(35, 148, 168)}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: black;
+}
+body{
+    margin-top: -570px;
+    margin-left: 50px;
+}
+</style>
+</head>
+<body>
+
+
+
+    <h1>WELCOME  {{item.mname}}!</h1>
+<div class="dropdown">
+    
+  <button class="dropbtn">INFO</button>
+  <div class="dropdown-content">
+  <a href="mnotifications">NOTIFICATIONS</a>
+  <a href="mcurrent">EDITPROFILE</a>
+  <a href="mcompleted">TRAININGS</a>
+  <a href="userlogin">LOGOUT</a>
+  
+
+  </div>
+</div>
+
+
+
+</body>
+</html>
+	 <router-outlet></router-outlet>
+ 

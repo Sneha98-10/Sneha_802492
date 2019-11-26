@@ -1,0 +1,54 @@
+<!-- <p>ucompleted works!</p>
+{{list|json}} -->
+<head>
+        <style>
+            th,td{
+                color:black;
+            }
+            
+            
+            </style>
+    </head>
+    <form style="width: max-content;height: max-content; background-color:white;margin-top:-390px;margin-left:350px;">
+
+<table class="table table-hover table-bordered"  style="width: max-content; height:max-content;margin-top:14px;margin-left: 11px; " >
+        <thead>
+            <tr>
+                    <th>TRAININGID</th>
+                <th>USERID</th>
+                <th>MENTORID</th>
+                <th>SKILLSID</th>
+               
+                <th>STARTDATE</th>
+                <th>ENDDATE</th>
+                <th>TIMESLOT</th>
+              
+                <th>PROGRESS</th>
+                <th>RATING</th>
+
+                
+            </tr>
+        </thead>
+        <tbody *ngFor="let item of list">
+            <tr>
+                <td>{{item.tid}}</td>
+                <td>{{item.uid}}</td>
+                <td>{{item.mid}}</td>
+                <td>{{item.sid}}</td>
+                <td>{{item.startDate}}</td>
+                <td>{{item.endDate}}</td>
+                <td>{{item.timeslot}}</td>
+               
+                <td>{{item.progress}}</td>
+                <td>{{item.rating}}</td>
+                <!-- <td> <button type="submit" (click)="Block(item.uid)">Block</button></td>
+                <td> <button type="submit" (click)="Delete(item.uid)">Delete</button></td> -->
+
+                <!-- <td>{{item.mnumber}}</td>
+                <td>{{item.mexperience}}</td>
+                <td>{{item.mtimeslot}}</td> -->
+              
+            </tr>
+        </tbody>
+    </table>
+   

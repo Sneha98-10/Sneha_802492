@@ -1,0 +1,47 @@
+<head>
+        <style>
+            th,td{
+                color:black;
+            }
+            
+            
+            </style>
+    </head>
+    <form style="width: max-content;height: max-content; background-color:white;margin-top:-8px;margin-left:350px;">
+
+<table class="table table-hover table-bordered"  style="width: max-content; height:max-content;margin-top:14px;margin-left: 11px; " >
+        <thead>
+            <tr>
+                    <th>ID</th>
+                <th>NAME</th>
+                <th>EMAIL</th>
+                <th>MOBILE</th>
+                <th>TECHNOLOGY</th>
+                <th>TIMESLOT</th>
+                <th>EXPERIENCE</th>
+                <th>STATUS</th>
+                
+            </tr>
+        </thead>
+        <tbody *ngFor="let item of list">
+            <tr>
+                <td>{{item.mid}}</td>
+                <td>{{item.mname}}</td>
+                <td>{{item.mmail}}</td>
+                <td>{{item.mnumber}}</td>
+                <td>{{item.mskills}}</td>
+                <td>{{item.mtimeslot}}</td>
+                <td>{{item.mexperience}}</td>
+                <td>{{item.mactive}}</td>
+                <td> <button type="submit" (click)="Block(item.mid)">Block</button></td>
+                <td> <button type="submit" (click)="UnBlock(item.mid)">UnBlock</button></td>
+                <td> <button type="submit" (click)="Delete(item.mid)">Delete</button></td>
+
+                <!-- <td>{{item.mnumber}}</td>
+                <td>{{item.mexperience}}</td>
+                <td>{{item.mtimeslot}}</td> -->
+              
+            </tr>
+        </tbody>
+    </table>
+  

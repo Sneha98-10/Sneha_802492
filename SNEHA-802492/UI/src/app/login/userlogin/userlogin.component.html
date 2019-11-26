@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+form {border: 3px solid black;
+border-radius:25px;
+margin-top: -340px;
+margin-left:-350px;
+ }
+ textarea:focus, input:focus{
+    outline: none;
+}
+
+input[type=text], input[type=password] {
+
+    background: transparent;
+    border: none;
+     border-bottom: 1px solid grey;
+}
+  /* input[type=password]:focus {
+     border-bottom: 2px solid #000;
+
+   }
+   input[type=text]:focus {
+     border-bottom: 2px solid #000;
+    
+   } */
+
+button {
+	border-radius: 25px;
+  background-color:rgb(35, 148, 168);
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+.container {
+  padding: 25px;
+}
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+button:hover {
+  opacity: 0.8;
+}
+
+.cancelbtn {
+	color:white;
+	border-radius: 25px;
+  width: auto;
+  padding: 10px 18px;
+  background-color:black;
+}
+
+
+
+
+.container {
+  padding: 30px;
+
+}
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+
+/* Change styles for span and cancel button on extra small screens */
+
+</style>
+</head>
+<body style="font-size: 24;margin-top:-580px;margin-left:800px;">
+
+  <form style="width: 70%; background-color:white;">
+      <h2 style="text-align: center;">LOGIN</h2>
+      <div class="container">
+    <!-- <label>Email Id</label><br>
+      <input type="email" [(ngModel)]="email_id" name="email_id" #email_id_ref="ngModel" required placeholder="Enter Email Id">
+      <span *ngIf="email_id_ref.invalid && email_id_ref.dirty">
+          <span *ngIf="email_id_ref.errors.required" class="error"> Should not be empty</span>
+      </span><br><br> -->
+
+      <label>User Name</label><br><br>
+      <input type="email"   placeholder="Enter Email" name="name" [(ngModel)]="email"><br><br>
+      <!-- <span *ngIf="user_name_ref.invalid && user_name_ref.dirty">
+          <span *ngIf="user_name_ref.errors.required" class="error"> Should not be empty</span>
+      </span><br><br> -->
+  
+      <label>Password</label><br><br>
+      <input type="password"   placeholder="Enter Password" name="password" [(ngModel)]="pwd"><br><br>
+      <!-- <span *ngIf="pass_word_ref.invalid && pass_word_ref.dirty">
+        <span *ngIf="pass_word_ref.errors.required" class="error"> Should not be empty</span>
+      </span><br><br> -->
+      <button type="submit" (click)="Login()">Login</button><br>
+
+    <!-- <label>
+      <input style="margin-left: 81px;" type="checkbox" checked="checked" name="remember"> Remember me
+	  </label><br>
+    <button type="button" class="cancelbtn">Cancel</button>
+	  <span class="psw"> <a href="#">Forget password?</a></span><br>
+	   <span class="psw" style="float:none;margin-left:16% ;">Don't have an account?<a href='userlogin'>LOGIN</a></span> -->
+  
+     <!-- <button [disabled]="!form1.form.valid" class="btn btn-success">Login</button> -->
+    </div>
+  </form>
+
+
+
+
+
+<!-- <form style="width: 70%; background-color:white;">
+		<h2 style="text-align: center;">USER LOGIN</h2>
+  <div class="container">
+	  <br>
+    <label for="uname" style="text-align: center;margin-left: 30%"><b>USER NAME</b></label><br><br>
+    <input type="text" style="text-align: center;margin-left: 20%" placeholder="Enter Username" name="uname" required><br><br><br>
+    
+    <label for="email" style="text-align: center;margin-left: 30%"><b>EMAIL</b></label><br><br>
+    <input type="email" style="text-align: center;margin-left: 20%" placeholder="Enter Email-Id" name="email" required><br><br><br>
+
+    <label for="psw"style="text-align: center;margin-left: 30%"><b>PASSWORD</b></label><br><br>
+    <input type="password" style="text-align: center;margin-left: 20%" placeholder="Enter Password" name="psw" required><br><Br>
+        
+    <button type="submit">Login</button><br>
+    <label>
+      <input style="margin-left: 81px;" type="checkbox" checked="checked" name="remember"> Remember me
+	  </label><br>
+    <button type="button" class="cancelbtn">Cancel</button>
+	  <span class="psw">Forgot <a href="#">password?</a></span><br>
+	   <span class="psw" style="float:none;margin-left:16% ;">Don't have an account?<a href='usersignup'>Signup</a></span>
+  </div>
+  
+</form> -->
+
+</body>
+</html>

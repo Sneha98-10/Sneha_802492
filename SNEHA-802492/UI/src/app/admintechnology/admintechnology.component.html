@@ -1,0 +1,53 @@
+<head>
+        <style>
+            th,td{
+                color:black;
+            }
+            
+            
+            </style>
+    </head>
+    <form style="width: max-content;height: max-content; background-color:white;margin-top:-8px;margin-left:350px;">
+
+<table class="table table-hover table-bordered"  style="width: max-content; height:max-content;margin-top:14px;margin-left: 11px; " >
+        <thead>
+            <tr>
+                    <th>ID</th>
+                  <th>NAME</th>
+                <th>CONTENT</th>
+                <th>FEE</th>
+               
+                <th>DURATION</th>
+               
+                
+            </tr>
+        </thead>
+        <tbody *ngFor="let item of list">
+            <tr>
+                    <td>{{item.sid}}</td>
+                <td>{{item.sname}}</td>
+                <td>{{item.stoc}}</td>
+                <td>{{item.sfee}}</td>
+                <td>{{item.sduration}}</td>
+                <td> <button type="submit" (click)="Delete(item.sid)">Delete</button></td>
+                
+                <!-- <td> <button type="submit">Block</button></td>
+                <td> <button type="submit" (click)="Delete(item.tid)">Delete</button></td> -->
+
+                <!-- <td>{{item.mnumber}}</td>
+                <td>{{item.mexperience}}</td>
+                <td>{{item.mtimeslot}}</td> -->
+              
+            </tr>
+        </tbody>
+        <td> <button type="submit" (click)="add()">ADD</button></td>
+        <div *ngIf="addClick==1">
+        <input type="text" placeholder="Enter Course Name" name="sname" [(ngModel)]="item.sname"><br>
+        <input type="text" placeholder="Enter Content" name="s1name" [(ngModel)]="item.stoc"><br>
+        <input type="number" placeholder="Enter Fees" name="s2name" [(ngModel)]="item.sfee"><br>
+        <input type="number" placeholder="Enter Duration" name="s3name" [(ngModel)]="item.sduration"><br>
+    </div>
+    <div>
+        <td> <button type="submit" (click)="Add()">SUBMIT</button></td>
+    </div>
+    </table>
